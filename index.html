@@ -1,24 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Flashgram Premium — Официальный Мод</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: rgba(23, 33, 50, 0.7);
+            --bg-color: #080c14;
+            --card-bg: rgba(20, 28, 42, 0.9);
             --accent-blue: #2481cc;
             --neon-glow: #00f2fe;
             --premium-gold: #ffca28;
             --text-main: #ffffff;
-            --text-secondary: #7e8b9b;
+            --text-secondary: #8e9ba8;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top, #16223f 0%, var(--bg-color) 70%);
+            background: radial-gradient(circle at top, #14213d 0%, var(--bg-color) 80%);
             color: var(--text-main);
             margin: 0;
             padding: 0;
@@ -27,181 +28,180 @@
             align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
             width: 100%;
-            max-width: 460px;
-            padding: 25px 15px;
+            max-width: 440px;
+            padding: 20px 16px;
             box-sizing: border-box;
         }
 
-        /* Анимированный светящийся логотип */
+        /* Премиальный анимированный логотип */
         .hero {
             text-align: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
+            margin-top: 15px;
+            margin-bottom: 25px;
         }
 
         .logo-box {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             margin: 0 auto 15px auto;
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            border-radius: 30px;
+            border-radius: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.35);
             animation: float 4s ease-in-out infinite;
         }
 
         .logo-box span {
-            font-size: 55px;
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+            font-size: 50px;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(3deg); }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 34px;
             font-weight: 800;
-            margin: 10px 0;
-            background: linear-gradient(to right, #fff, #b3e5fc);
+            margin: 5px 0;
+            background: linear-gradient(to right, #ffffff, #b3e5fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .tagline {
             color: var(--text-secondary);
-            font-size: 15px;
-            margin-bottom: 25px;
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 20px;
         }
 
-        /* Блок счетчика «Живой раздачи» */
+        /* Индикатор акций */
         .live-counter {
-            background: rgba(255, 74, 74, 0.1);
-            border: 1px solid rgba(255, 74, 74, 0.2);
-            padding: 10px;
-            border-radius: 12px;
+            background: rgba(255, 68, 68, 0.12);
+            border: 1px solid rgba(255, 68, 68, 0.25);
+            padding: 12px;
+            border-radius: 14px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             color: #ff5252;
-            margin-bottom: 25px;
-            text-align: center;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .pulse-dot {
-            width: 8px;
-            height: 8px;
+            width: 9px;
+            height: 9px;
             background-color: #ff5252;
             border-radius: 50%;
-            animation: pulse-dot-anim 1.5s infinite;
+            box-shadow: 0 0 10px #ff5252;
+            animation: pulse-dot-anim 1.2s infinite;
         }
 
         @keyframes pulse-dot-anim {
             0% { transform: scale(0.8); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 1; }
             100% { transform: scale(0.8); opacity: 0.5; }
         }
 
-        /* Премиум фичи */
+        /* Премиум функции */
         .features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .feature-card {
             background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.06);
             border-radius: 16px;
-            padding: 15px;
-            text-align: left;
-            backdrop-filter: blur(10px);
+            padding: 14px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         .feature-icon {
-            font-size: 24px;
-            margin-bottom: 8px;
+            font-size: 22px;
+            margin-bottom: 6px;
         }
 
         .feature-title {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
             color: #fff;
             margin-bottom: 4px;
         }
 
         .feature-desc {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--text-secondary);
             line-height: 1.3;
         }
 
-        /* Кнопка скачивания с авто-запуском Dropbox */
+        /* Кнопка мгновенного скачивания */
         .btn-container {
-            position: relative;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .btn-download {
             background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
             color: #fff;
             border: none;
-            padding: 20px;
+            padding: 18px;
             font-size: 18px;
             font-weight: 700;
-            border-radius: 20px;
+            border-radius: 18px;
             cursor: pointer;
             width: 100%;
             display: block;
             box-sizing: border-box;
             text-decoration: none;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
+            box-shadow: 0 8px 25px rgba(0, 114, 255, 0.35);
+            transition: all 0.2s ease;
         }
 
-        .btn-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0, 198, 255, 0.6);
+        .btn-download:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 15px rgba(0, 114, 255, 0.5);
         }
 
-        /* Стилизованная пошаговая карта */
+        /* Четкая пошаговая инструкция */
         .instruction-box {
             background: var(--card-bg);
-            border-radius: 24px;
-            padding: 25px 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
+            border-radius: 20px;
+            padding: 22px 18px;
+            border: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.25);
         }
 
         .instruction-box h2 {
-            font-size: 19px;
+            font-size: 18px;
             margin-top: 0;
-            margin-bottom: 25px;
-            font-weight: 700;
-            background: linear-gradient(45deg, #ffca28, #fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 22px;
+            font-weight: 800;
+            color: var(--premium-gold);
+            text-align: left;
         }
 
         .timeline-step {
-            position: relative;
-            padding-left: 45px;
-            margin-bottom: 25px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
             text-align: left;
         }
 
@@ -209,77 +209,65 @@
             margin-bottom: 0;
         }
 
-        .timeline-step::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 24px;
-            bottom: -20px;
-            width: 2px;
-            background: rgba(255,255,255,0.05);
-        }
-
-        .timeline-step:last-child::before {
-            display: none;
-        }
-
         .step-badge {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 32px;
-            height: 32px;
-            background: #1f2c43;
+            background: #1a263b;
             border: 2px solid var(--accent-blue);
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             color: var(--neon-glow);
+            flex-shrink: 0;
         }
 
         .step-content p {
-            font-size: 13px;
-            color: var(--text-secondary);
+            font-size: 13.5px;
+            color: #e2e8f0;
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.45;
+        }
+
+        .step-content b {
+            color: #fff;
         }
 
         .step-content a {
             color: var(--neon-glow);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        /* Блок отзывов */
+        /* Блок социальных отзывов */
         .reviews-section {
             background: rgba(255,255,255,0.02);
-            border-radius: 20px;
-            padding: 15px;
+            border-radius: 18px;
+            padding: 12px;
             margin-bottom: 25px;
         }
 
         .review-card {
-            background: rgba(11, 15, 25, 0.6);
+            background: rgba(10, 14, 22, 0.7);
             padding: 12px;
             border-radius: 12px;
             font-size: 12px;
             text-align: left;
-            margin-bottom: 10px;
-            border: 1px solid rgba(255,255,255,0.02);
+            margin-bottom: 8px;
+            border: 1px solid rgba(255,255,255,0.03);
         }
 
         .review-card:last-child { margin-bottom: 0; }
-        .review-header { display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: 600; color: #b3e5fc;}
-        .review-stars { color: var(--premium-gold); }
+        .review-header { display: flex; justify-content: space-between; margin-bottom: 4px; font-weight: 700; color: #b3e5fc;}
+        .review-stars { color: var(--premium-gold); letter-spacing: 1px; }
 
         .footer-text {
             font-size: 11px;
-            color: #4f5b66;
+            color: #52627a;
             text-align: center;
-            margin-top: 20px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -308,7 +296,7 @@
             </div>
             <div class="feature-card">
                 <div class="feature-icon">👑</div>
-                <div class="feature-title">Premium подписка</div>
+                <div class="feature-title">Premium статус</div>
                 <div class="feature-desc">Доступ ко всем премиум-функциям бесплатно.</div>
             </div>
             <div class="feature-card">
@@ -318,17 +306,25 @@
             </div>
             <div class="feature-card">
                 <div class="feature-icon">👁️</div>
-                <div class="feature-title">Режим невидимки</div>
+                <div class="feature-title">Невидимка</div>
                 <div class="feature-desc">Чтение сообщений без отметки о прочтении.</div>
             </div>
         </div>
 
         <div class="btn-container">
-            <!-- Ссылка Dropbox с измененным dl=1 для автоскачивания -->
-            <a href="https://dropbox.com" class="btn-download">
+            <!-- Прямая API-ссылка для скачивания файла с Google Диска -->
+            <a href="https://google.com" class="btn-download">
                 Установить Flashgram Бесплатно
             </a>
         </div>
 
         <div class="instruction-box">
-
+            <h2>🚀 Порядок активации пакета:</h2>
+            
+            <div class="timeline-step">
+                <div class="step-badge">1</div>
+                <div class="step-content">
+                    <p><b>Скачайте установщик.</b> Нажмите синюю кнопку выше для скачивания файла .apk на ваш смартфон.</p>
+                </div>
+            </div>
+            
